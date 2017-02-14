@@ -1,0 +1,147 @@
+body{
+	font-size: 16px;
+	font-family: sans-serif;
+	background: purple;
+	position: relative;
+}
+
+/*Comenzamos con el estilo de todo el header*/
+
+header{
+	width: 100%;
+	height: 35px;
+	background: #233D58;
+	position: relative;
+}
+
+/* Para el header h1 y el header nav utilizamos el display none para ocultar
+estos elementos, ya que estamos usando RESPONSIVE DESIGN y el h1 se verá solo
+en las versiones de pantalla grande, y el nav será un menú desplegable en la
+version reducida*/
+
+header h1{
+	display: none;
+}
+
+header nav{
+	display: none;
+}
+
+header #pre_section,
+header #next_section{
+	width: 25px;
+	height: 25px;
+	cursor: pointer; /*Para que cuando se ponga encima el cursor cambie la mano*/
+	overflow: :hidden; /*Para eliminar todo lo que se salga elemento*/
+	margin:5px;
+	position: absolute;
+	top: 0px;
+}
+
+header #pre_section{
+	right: 35px;
+}
+
+header #next_section{
+	right: 5px;
+}
+
+header #pre_section img,
+header #next_section img{
+	position: relative;
+	width:125%; 
+	top:-3px;
+	left:-3px;
+}
+
+/*Giramos el elemento para que sea una flecha para cada lado*/
+
+header #pre_section img{
+	transform: rotate(180deg);
+}
+
+
+
+@media screen and (min-width:480px){
+	body{
+		background: red;
+	}
+}
+
+/*Para algunos dispositivos que tienen pantalla algo más grande o que la usan
+girada*/
+@media screen and (min-width:600px){
+	body{
+		background: orange;
+	}
+}
+
+/*Ahora vamos a hacer que en el tamaño tablet las flechas cambien de tamaño,
+posicion y color de fondo*/
+@media screen and (min-width:767px){
+	body{
+		background: yellow;
+	}
+	/*Tenemos ahora que hacer el header más grande*/
+	header{
+		height: 50px;
+	}
+	/*Tenemos que activar el h1 (imagen y titulo) y posicionarlo*/
+	header h1{
+		display: inline-block;
+		width:20%;
+		margin: 0px;
+		height: 50px;
+		margin-left: 80px;
+		line-height: 50px; /*Centrado Vertical - Hay que ponerle el mismo tamaño que el elemento*/
+		min-width: 200px; /*Anchura mínima siempre de 200pixeles*/
+	}
+	/*Configuramos los enlaces del h1. >* Son los hijos, en este caso los enlaces*/
+	header h1 > *{
+		display: inline-block;
+		vertical-align: middle;
+		text-decoration: none;
+		color: white;
+		font-size: 0.55em;
+		margin: 0px 3px;
+	}
+
+	header h1 figure{
+		height: 40px;
+		width: 40px;
+		margin: 0px;
+	}
+
+	header h1 figure img{
+		width: 100%;
+	}
+
+	header #pre_section,
+	header #next_section{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background: #29abe2;
+			right: 40px;
+			z-index: 999; 	/*Para asegurarnos que las flechas queden por encima							de todas las cosas*/
+			border-radius: 50%; /*Para hacer los botones redondos*/
+	}
+	header #pre_section{
+		top:115px;
+	}
+	header #next_section{
+		top:190px;
+	}
+
+	header #pre_section img,
+	header #next_section img{
+		width: 100%;
+		top: 0px;
+		left: 0px;
+}
+
+@media screen and (min-width:950px){
+	body{
+		background: green;
+	}
+}

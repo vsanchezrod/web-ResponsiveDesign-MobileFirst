@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Sonia Carretero</title>
+	<title>Virginia Sánchez</title>
 	<script src="js/modernizr-custom.js"></script>
 	
 	<link rel="stylesheet" href="css/normalize.css">
@@ -12,6 +12,46 @@
 
 </head>
 <body>
+	<header>
+
+		<h1>
+			<!-- Con esto tenemos el logo con el enlace de Sonia Carretero (Cuando se ve en pantalla grande-->
+			<a href="index.html">
+				<figure><img src="img/Icon.png" alt=""></figure>
+			</a>
+			<a href="index.html">Vir Sánchez</a>
+		</h1>
+		
+		<!-- Menú de navegación con la Tarjeta del menú para móviles id="ioMenu" para los menus que salen de tipo desplegable-->
+
+		<nav id="ioMenu">
+			<!--Para cuando se muestra el menú-->
+			<figure id="showMenu" class="ioMenuMovil"><img src="img/menu.png" alt=""></figure>
+				
+			<!--Para cuando se esconde el menú-->
+			<div id="card_menu">
+				<figure id="hideMenu" class="ioMenuMovil"><img src="img/exit.png" alt=""></figure>
+				
+			<!--Creamos ahora el menú-->
+				<figure id="logo_menu"><img src="img/logo.png" alt=""></figure>
+
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Sobre mí</a></li>
+					<li><a href="#">Skills</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</div>
+		</nav>
+				
+		<!--Con esto hacemos los botones para cambiar de sección y añadir las imágenes para los botones-->
+
+		<div id="pre_section"><img src="img/flecha.png" alt=""></div>
+		<div id="next_section"><img src="img/flecha.png" alt=""></div>
+
+	</header>
 	
 </body>
 </html>
