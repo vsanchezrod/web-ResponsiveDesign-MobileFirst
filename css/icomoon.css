@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?uhns54');
+  src:  url('fonts/icomoon.eot?uhns54#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?uhns54') format('truetype'),
+    url('fonts/icomoon.woff?uhns54') format('woff'),
+    url('fonts/icomoon.svg?uhns54#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play:before {
+  content: "\e912";
+}
+.icon-diamonds:before {
+  content: "\e919";
+}
+.icon-price-tag:before {
+  content: "\e935";
+}
+.icon-pushpin:before {
+  content: "\e946";
+}
+.icon-compass:before {
+  content: "\e949";
+}
+.icon-undo2:before {
+  content: "\e967";
+}
+.icon-redo2:before {
+  content: "\e968";
+}
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-play3:before {
+  content: "\ea1c";
+}
+.icon-arrow-up-right2:before {
+  content: "\ea3b";
+}
+.icon-arrow-down-left2:before {
+  content: "\ea3f";
+}
+.icon-shift:before {
+  content: "\ea4f";
+}
+.icon-ctrl:before {
+  content: "\ea50";
+}
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+
