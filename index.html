@@ -26,11 +26,13 @@
 
 		<nav id="ioMenu">
 			<!--Para cuando se muestra el menú-->
-			<figure id="showMenu" class="ioMenuMovil"><img src="img/menu.png" alt=""></figure>
+			<!-- Es necesario añadir evento para mostrar y ocultar menú que se harán con JS (onClick)-->
+			<figure id="showMenu" class="ioMenuMovil" onClick="displayMenu()"><img src="img/menu.png" alt=""></figure>
 				
 			<!--Para cuando se esconde el menú-->
+			<!-- Es necesario añadir evento para mostrar y ocultar menú que se harán con JS (onClick)-->
 			<div id="card_menu">
-				<figure id="hideMenu" class="ioMenuMovil"><img src="img/exit.png" alt=""></figure>
+				<figure id="hideMenu" class="ioMenuMovil" onClick="displayMenu()"><img src="img/exit.png" alt=""></figure>
 				
 			<!--Creamos ahora el menú-->
 				<figure id="logo_menu"><img src="img/logo.png" alt=""></figure>
@@ -53,5 +55,27 @@
 
 	</header>
 	
+
+
+<!-- ESCRIBIMOS EL SCRIPT que va a LANZAR LOS EVENTOS ONCLICK. Por defecto el display del card_menu esta activo, y lo que tenemos que hacer con la función es que se desactive y se vuelva a activar si le volvemos a dar -->
+
+<script>
+	
+	function displayMenu() {
+		var display; //Variable que recoge el display actual del menú
+		var card_menu = document.getElementById("card_menu");
+		display = card_menu.style.display;
+
+		if(display == "none"){
+			card_menu.style.display = "block";
+		}
+		else{
+			card_menu.style.display = "none";
+		}
+	}
+
+</script>
+
+
 </body>
 </html>
