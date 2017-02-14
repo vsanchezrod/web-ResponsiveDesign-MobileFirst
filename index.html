@@ -74,7 +74,7 @@
 
 <script>
 	
-	//Función para identificar el ancho de la ventana
+	//FALTA Función para identificar el ancho de la ventana. COMPATIBLIDAD CON OTROS NAVEGADORES (No entiendo esto muy bien por lo que no lo he hecho aun)
 
 	function displayMenu(){
 		var display; //Variable que recoge el display actual del menú
@@ -89,7 +89,41 @@
 		}
 	}
 
+	function displaySection(nav){
+		var sections = new Array(6); //Creamos un ARRAY con 6 elementos que van a ser las diferentes secciones
+		sections[0] = "Home";
+		sections[1] = "Sobremí";
+		sections[2] = "Skills";
+		sections[3] = "Portfolio";
+		sections[4] = "Blog";
+		sections[5] = "Contacto";
 
+		var search; //Variable de búsqueda, donde vamos a ir añadiendo cada elemento
+		var show;
+
+		for(var i=0, i<6, i++){
+			search = document.getElementById(sections[i]);
+			show = search.style.display; //Guardamos la variable que hemos rastreado
+
+			if(show == "block"){
+				search.style.display = "none";
+					if(nav == "next"){	
+						i++;
+						if(i>5) i=0;
+					}
+					//Si nav es next, entonces sumamos a i 1, pero si i es mayor de 5, ponemos que i sea 0 para que vuelva a la pestaña de home
+
+					if(nav == "prev"){
+						i--;
+						if(i<0) i=5;
+					}
+					//Si nav es prev, entonces restamos a i 1, pero si i es menor que 0, ponemos que i sea 5 para que vuelva a la última pestaña que es Contacto
+					search = document.getElementById(sections[i]);
+					search.style.display = "block";
+					break; // Para que ya no continúe haciendo búsquedas
+			}
+		}
+	}
 
 </script>
 
