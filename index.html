@@ -49,19 +49,34 @@
 		</nav>
 				
 		<!--Con esto hacemos los botones para cambiar de sección y añadir las imágenes para los botones-->
+		<!-- Añadimos EVENTO onClick para poder pasar de una seccion a otra, le añadimos una función a la que le metemos el parámetro prev o next en función de hacia que sentido queramos ir-->
 
-		<div id="pre_section"><img src="img/flecha.png" alt=""></div>
-		<div id="next_section"><img src="img/flecha.png" alt=""></div>
+		<div id="pre_section" onClick="displaySection('prev')"><img src="img/flecha.png" alt=""></div>
+		<div id="next_section" onClick="displaySection('next')"><img src="img/flecha.png" alt=""></div>
 
 	</header>
 	
+	<!--Vamos a crear el SLIDER, es decir, un área en el que va a ir cambiando el contenido según nos movamos con las flechas de navegación. Dentro de este SLIDER vamos a crear las diferentes SECCIONES que tenemos-->
+
+	<div id="slider">
+
+		<section class="slide" id="Home" style="display:block"></section>
+		<section class="slide" id="Sobremí" style="display:none"></section>
+		<section class="slide" id="Skills" style="display:none"></section>
+		<section class="slide" id="Portfolio" style="display:none"></section>
+		<section class="slide" id="Blog" style="display:none"></section>
+		<section class="slide" id="Contacto" style="display:none"></section>
+
+	</div>
 
 
 <!-- ESCRIBIMOS EL SCRIPT que va a LANZAR LOS EVENTOS ONCLICK. Por defecto el display del card_menu esta activo, y lo que tenemos que hacer con la función es que se desactive y se vuelva a activar si le volvemos a dar -->
 
 <script>
 	
-	function displayMenu() {
+	//Función para identificar el ancho de la ventana
+
+	function displayMenu(){
 		var display; //Variable que recoge el display actual del menú
 		var card_menu = document.getElementById("card_menu");
 		display = card_menu.style.display;
@@ -73,6 +88,8 @@
 			card_menu.style.display = "none";
 		}
 	}
+
+
 
 </script>
 

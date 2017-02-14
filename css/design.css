@@ -114,8 +114,59 @@ header #pre_section img{
 	transform: rotate(180deg);
 }
 
+/*SLIDER y su configuración de estilos*/
+#slider{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background: black;
+}
 
+/*¿Cómo podemos nosotros navegar con las flechas para movernos en el SLIDER*/
+/*Es tan sencillo como darle a cada section darle un position ABSOLUTE*/
+/*Como todos van a ser POSITION ABSOLUTE van a estar unos encima de otros*/
 
+#slider section.slide{
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+/*Al pulsar los botones de navegacion se vayan cambiando los elementos 
+y se ponga el que hallamos activado por encima del resto
+Esto lo vamos a tener que hacer con dos puntos, con los botones de la
+barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCRIPT*/
+
+#slider #Home{
+	height: 600px;
+	background: orange;
+}
+
+#slider #Sobremí{
+	height: 500px;
+	background: yellow;
+}
+
+#slider #Skills{
+	height: 400px;
+	background: red;
+}
+
+#slider #Portfolio{
+	height: 300px;
+	background: green;
+}
+
+#slider #Blog{
+	height: 200px;
+	background: blue;
+}
+
+#slider #Contacto{
+	height: 100px;
+	background: purple;
+}
 
 
 
@@ -141,7 +192,7 @@ girada*/
 
 
 
-
+/*TABLET*/
 
 /*Ahora vamos a hacer que en el tamaño TABLET las flechas cambien de tamaño,
 posicion y color de fondo*/
