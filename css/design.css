@@ -23,8 +23,62 @@ header h1{
 	display: none;
 }
 
-header nav{
-	display: none;
+/*Indicaciones de tamaño en el wirefram*/
+header nav .ioMenuMovil{
+	height: 25px;
+	width: 120px;
+	cursor: pointer;
+	line-height: 40px;
+	margin: 0px 0px 0px 10px;
+	padding-top: 5px; /* ***************** Se utilizando padding en vez de coordenadas para que los bordes
+						sean paddings y sean parte del elemento y se pueda clickear*/
+}
+
+header nav .ioMenuMovil img{
+	height: 100%; /*Que se ajuste al ancho de la barra de navegaci´´on*/
+}
+
+/*Diseñamos la tarjeta del menú*/
+
+header nav #card_menu{
+	/*display: none;*/
+	position: relative;
+	width: 230px;
+	background: white;
+	top: -30px;
+	left: 0px;
+	border-right: 3px solid #AFAEAE;
+	z-index: 999; /*Se va a tener que ver siempre por encima*/
+	padding-bottom: 50px; /*Para que no corte justo despues de la lista sino q deje un espacio*/
+}
+
+/*Ajustamos el logo*/
+
+header nav #card_menu #logo_menu{
+	height: 200px;
+	width: 80%;
+	margin: 30px 0px; /*Importante que esta linea vaya antes q la siguiente*/
+	margin-left: 10%;
+	margin-bottom: 60px;
+}
+
+header nav #card_menu #logo_menu img{
+	width: 100%;
+}
+
+/*Decinir la lista de elementos de la barra de navegación*/
+
+/*header nav #card_menu ul{}*/
+
+header nav #card_menu ul li{
+	list-style-type: none;
+	font-size: 1.5em;
+	line-height: 37px; /*Para separar los elementos de la lista entre sí*/
+}
+
+header nav #card_menu ul li a{
+	text-decoration: none;
+	color: black;
 }
 
 header #pre_section,
@@ -62,6 +116,15 @@ header #pre_section img{
 
 
 
+
+
+
+
+
+/*RESPONSIVE DESIGN*/
+
+/*MÓVIL*/
+
 @media screen and (min-width:480px){
 	body{
 		background: red;
@@ -76,7 +139,11 @@ girada*/
 	}
 }
 
-/*Ahora vamos a hacer que en el tamaño tablet las flechas cambien de tamaño,
+
+
+
+
+/*Ahora vamos a hacer que en el tamaño TABLET las flechas cambien de tamaño,
 posicion y color de fondo*/
 @media screen and (min-width:767px){
 	body{
@@ -116,6 +183,56 @@ posicion y color de fondo*/
 		width: 100%;
 	}
 
+	/*Configurar el Responsive Design del menú de navegacion para que no aparezca*/
+
+	header nav {
+		display: inline-block;
+		vertical-align: middle;
+		width: 62%;
+		position: relative;
+	}
+
+	header nav #showMenu,
+	header nav #hideMenu{
+		display: none; /*Para que no se vean en pantalla grande*/
+
+	}
+
+	header nav #card_menu{
+		display: inline-block;
+		border: none;
+		background: none;
+		position: relative;
+		top: 0px;
+		width: 100%;
+		text-align: right; /*Para que los elementos se alineen a la derecha*/
+		padding-bottom: 0px;
+	}
+
+	header nav #card_menu figure{
+		display: none;
+	}
+
+	header nav #card_menu ul{
+		padding: 0px;
+		margin: 0px;
+		margin-top: -15px;
+	}
+	
+	header nav #card_menu ul li{
+		display: inline-block;
+		width: 75px;
+		text-align: center;
+		font-size: 1.1em;
+		margin: 0px -3px;
+	}
+
+	header nav #card_menu ul li a{
+		color: white;
+	}
+
+	/*Botones de navegación*/
+
 	header #pre_section,
 	header #next_section{
 			position: absolute;
@@ -139,6 +256,15 @@ posicion y color de fondo*/
 		top: 0px;
 		left: 0px;
 }
+
+
+
+
+
+
+
+
+/*ESCRITORIO PANTALLA GRANDE*/
 
 @media screen and (min-width:950px){
 	body{
