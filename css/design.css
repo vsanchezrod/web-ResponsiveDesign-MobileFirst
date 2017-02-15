@@ -139,9 +139,28 @@ Esto lo vamos a tener que hacer con dos puntos, con los botones de la
 barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCRIPT*/
 
 #slider #Home{
-	height: 600px;
-	background: orange;
+	background: #233D58;
+	position: relative;
+	text-align: center;
+	padding-bottom: 50px; /*De cara a que el footer va debajo*/
 }
+
+#slider #Home #mainanimation{
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 #slider #Sobremí{
 	height: 500px;
