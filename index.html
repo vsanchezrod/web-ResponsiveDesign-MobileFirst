@@ -43,8 +43,8 @@
 					<li><a onClick = "navSection('Skills')" href="#">Skills</a></li>
 					<li><a onClick = "navSection('Portfolio')" href="#">Portfolio</a></li>
 					<li><a onClick = "navSection('Blog')" href="#">Blog</a></li>
-					<li><a href="#">Contacto</a></li> 
-					<!--En contacto no hacemos Onclick porque va a ser de otra forma -->
+					<li><a onClick="displayFormContact('block')" href="#">Contacto</a></li> 
+					<!--En contacto hacemos Onclick para q salga el formulario -->
 				</ul>
 			</div>
 		</nav>
@@ -75,18 +75,21 @@
 	<div id="contact_form">
 		<form action="contact.php" method="post" id="form1" name="form1"> <!--contact.php se activa cuando damos a enviar en el formulario para mandar los datos que se hará a través de un input de tipo submit. Es necesario añadir un method que va a ser de tipo post puesto que se va a enviar-->
 
-			<div id="closeForm"></div>
+			<div id="closeForm" onClick="displayFormContact('none')"></div>
 			<figure id="logoMensaje"><img src="img/sobre.png" alt=""></figure>
 			<p>Dí Hola!</p>
 			<input type="text" name="name" id="name" placeholder="Tu nombre" onfocus="if(this.placeholder='') this.placeholder='Tu nombre'">
 			<input type="email" name="email" id="email" placeholder="Tu email" onfocus="if(this.placeholder='') this.placeholder='Tu email'">
 			
 			<!-- Para el mensaje no es un input de tipo texto, es TEXTAREA-->
-			<textarea name="message" id="message" placeholder="Mesanje" onfocus="if(this.placeholder='') this.placeholder='Mensaje'"></textarea>
+			<textarea name="message" id="message" placeholder="Mensaje" onfocus="if(this.placeholder='') this.placeholder='Mensaje'"></textarea>
 			<input type="submit" name="submit" id="button" value="ENVIAR">
 
 		</form>
 	</div>
+
+	<!--CREAR BOTÓN PARA ABRIR EL FORMULARIO DE CONTACTO, con evento y display por defecto BLOCK-->
+	<div id="contact_button" onClick="displayFormContact('block')"></div>
 
 
 
@@ -190,6 +193,14 @@
 		setColors(i);
 
 		// TODO ESTE CÓDIGO QUEDA OPTIMIZADO CON LA FUNCIÓN setColors(); y lo único que hay que hacer es llamar a la FUNCIÓN
+	}
+
+	//FUNCION PARA HABILITAR EL BOTON DE FORMULARIO DE CONTACTO
+
+	function displayFormContact(status){
+		var form = document.getElementById("contact_form");
+		form.style.display = status;
+
 	}
 
 </script>

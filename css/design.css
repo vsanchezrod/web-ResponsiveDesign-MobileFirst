@@ -168,6 +168,109 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 	background: purple;
 }
 
+/*FORMULARIO DE CONTACTO*/
+
+#contact_form{
+	position: absolute;
+	right: 0px;
+	top: 35px;
+	background: white;
+	border: 1px solid green;
+	width: 250px;
+	height: 100vh; /*Esto es el 100% no del padre, sino del DISPOSITIVO*/
+	box-shadow: 0px 0px 3px #9F9E9E;
+	z-index: 999;
+	display: none; /*Tiene que salir solo cuando le demos al Botón*/
+}
+
+#contact_form #closeForm{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 85%;
+	top: 190px;
+}
+
+#contact_form #closeForm:hover{
+	cursor: pointer;
+}
+
+/*UTILIZAR FUENTES VECTORIALES PARA PONER EL ICONO*/
+
+#contact_form #closeForm:before{
+	font-family: 'icomoon';
+	content: "\ea0f";
+	top: 6px;
+	left: 8px;
+	position: relative;
+}
+
+#contact_form figure{
+	height: 180px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background: #29abe2;
+}
+
+#contact_form figure img{
+	height: 90%; /*LO HE PUESTO CON %*/
+	margin: 5%; /*LO HE PUESTO CON %**/
+}
+
+#contact_form p{
+	margin: 20px;
+	width: 90%;
+	margin-left: 5%;
+}
+
+#contact_form input,
+#contact_form textarea{
+	display: block; /*Porque no tienen que estar uno encima del otro*/
+	margin: 20px;
+	border: none; /*Le quitamos todos los bordes y solo dejamos el de abajo*/
+	border-bottom: 2px solid gray;
+	width: 90%;
+	margin-left: 5%;
+	padding-bottom: 3px;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+
+#contact_form #button{
+	background: orange;
+	color: white;
+	border: none;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+#contact_button{
+	width: 60px;
+	height: 60px;
+	background: orange;
+	border-radius: 50%;
+	color: white;
+	z-index: 950; /*Menos de 999 porque sino se va a quedar por encima de la tarjeta de menu movil*/
+	position: fixed; /*Queremos que se vea SIEMPRE*/
+	right: 10px;
+	top: 80vh; /*80% del tamaño (height) del dispositivo*/
+}
+
+#contact_button:hover{
+	cursor: pointer;
+}
+
+#contact_button:before{
+	font-family: 'icomoon';
+	content: "\e949";
+	position: relative;
+	font-size: 2.5em;
+	top: 10px;
+	left: 5px;
+}
+
 
 
 
@@ -306,15 +409,17 @@ posicion y color de fondo*/
 		width: 100%;
 		top: 0px;
 		left: 0px;
+	}
+	#contact_form{
+		top: 50px; /*Lo mismo que tenemos para el header*/
+		width: 400px;
+	}
+	#contact_button{
+		right: 40px;
+	}
 }
 
-
-
-
-
-
-
-
+	
 /*ESCRITORIO PANTALLA GRANDE*/
 
 @media screen and (min-width:950px){

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?uhns54');
-  src:  url('fonts/icomoon.eot?uhns54#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?uhns54') format('truetype'),
-    url('fonts/icomoon.woff?uhns54') format('woff'),
-    url('fonts/icomoon.svg?uhns54#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?22n1kp');
+  src:  url('fonts/icomoon.eot?22n1kp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?22n1kp') format('truetype'),
+    url('fonts/icomoon.woff?22n1kp') format('woff'),
+    url('fonts/icomoon.svg?22n1kp#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,8 +48,23 @@
 .icon-star-empty:before {
   content: "\e9d7";
 }
+.icon-cross:before {
+  content: "\ea0f";
+}
 .icon-play3:before {
   content: "\ea1c";
+}
+.icon-previous2:before {
+  content: "\ea23";
+}
+.icon-next2:before {
+  content: "\ea24";
+}
+.icon-arrow-right:before {
+  content: "\ea34";
+}
+.icon-arrow-left:before {
+  content: "\ea38";
 }
 .icon-arrow-up-right2:before {
   content: "\ea3b";
