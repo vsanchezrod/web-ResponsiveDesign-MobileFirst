@@ -129,7 +129,7 @@ header #pre_section img{
 #slider section.slide{
 	position: absolute;
 	width: 100%;
-	top: -17px;
+	top: -20px;
 	left: 0px;
 }
 
@@ -142,16 +142,27 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 	background: #233D58;
 	position: relative;
 	text-align: center;
-	padding-bottom: 50px; /*De cara a que el footer va debajo*/
+	padding-bottom: 70px; /*De cara a que el footer va debajo*/
 }
  
 #slider #Home .mainanimation{
-	background: red;
 	width: 80%;
 	min-height: 300px;
 	margin-left: 10%;
 	position: absolute;
 }
+
+/*ANIMACIÓN EXTERNA*/
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(35, 61, 88, 0.8) 10%, rgba(35, 61, 88, 0.8) 100%), url(http://38.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 
 #slider #Home .mainlogo{
 	background: none; /*Porque va a estar encima de la animación de las estrellas*/
@@ -205,17 +216,11 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 	text-decoration: none;
 }
 
-
-
-
-
-
-
+/* FALTAN HACER EL RESTO DE SECTIONES */
 
 #slider #Sobremí{
-	height: 400px;
-	background: yellow;
-}
+	background: #29abe2;
+}/*
 
 #slider #Skills{
 	height: 300px;
@@ -230,7 +235,7 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 #slider #Blog{
 	height: 100px;
 	background: purple;
-}
+} */
 
 
 /*FORMULARIO DE CONTACTO*/
@@ -363,8 +368,8 @@ footer:after{
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background: black;
 	color: white;
+	background: black;
 	font-size: 4em;
 	transition-duration: 0.4s;
 }
@@ -376,7 +381,8 @@ pasemos el ratón por encima de after*/
 footer:hover:after{
 	transform: rotate(180deg);
 	background: white;
-	color: black;
+	color: white;							/*PARA ARREGLAR LO DE LA FLECHA Replica en blanco para q no se vea*/
+	text-shadow: 0px 15px 0px black;		/*PARA ARREGLAR LO DE LA FLECHA Crea una replica*/
 }
 
 footer .redessociales{
@@ -459,9 +465,7 @@ footer p{
 /*Para algunos dispositivos que tienen pantalla algo más grande o que la usan
 girada*/
 @media screen and (min-width:600px){
-	body{
-		background: orange;
-	}
+	
 }
 
 
@@ -471,9 +475,7 @@ girada*/
 /*Ahora vamos a hacer que en el tamaño TABLET las flechas cambien de tamaño,
 posicion y color de fondo*/
 @media screen and (min-width:767px){
-	body{
-		background: yellow;
-	}
+	
 	/*Tenemos ahora que hacer el header más grande*/
 	header{
 		height: 50px;
@@ -594,7 +596,5 @@ posicion y color de fondo*/
 /*ESCRITORIO PANTALLA GRANDE*/
 
 @media screen and (min-width:950px){
-	body{
-		background: green;
-	}
+	
 }
