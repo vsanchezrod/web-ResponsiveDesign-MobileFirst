@@ -12,6 +12,7 @@ header{
 	height: 35px;
 	background: #233D58;
 	position: relative;
+	z-index: 999;
 }
 
 /* Para el header h1 y el header nav utilizamos el display none para ocultar
@@ -129,7 +130,7 @@ header #pre_section img{
 #slider section.slide{
 	position: absolute;
 	width: 100%;
-	top: 0px;
+	top: -17px;
 	left: 0px;
 }
 
@@ -144,16 +145,66 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 	text-align: center;
 	padding-bottom: 50px; /*De cara a que el footer va debajo*/
 }
-
-#slider #Home #mainanimation{
-
-	
+ 
+#slider #Home .mainanimation{
+	background: red;
+	width: 80%;
+	min-height: 300px;
+	margin-left: 10%;
+	position: absolute;
 }
 
+#slider #Home .mainlogo{
+	background: none; /*Porque va a estar encima de la animación de las estrellas*/
+	width: 60vw; /*60% de la anchura del dispositivo*/
+	margin-left: 20vw;
+	min-height: 430px;
+	position: relative;
+}
 
+#slider #Home .mainlogo h2{
+	font-size: 1.2em;
+	color: white;
+	font-weight: lighter;
+	padding-top: 80px;
+} 
 
+#slider #Home .mainlogo h2 strong{
+	font-size: 1.7em;
+	display: block;
+}
 
+#slider #Home .mainlogo figure,
+#slider #Home .mainlogo figure img{
+	width: 100%;
+	margin: 0px;
+}
 
+#slider #Home .buttonspage{
+	width: 100%;
+	text-align: center;
+}
+
+/*PARA LOS HIJOS DE LA CLASE BUTTONSPAGE*/
+
+#slider #Home .buttonspage > *{
+	display: inline-block;
+	width: 40%;
+	margin: 5px 2.5%;
+	font-size: 0.9em;
+	color: white;
+	padding: 15px 2.5%;
+}
+
+#slider #Home #contratame{
+	background: #F8931F;
+	cursor: pointer;
+}
+
+#slider #Home a{
+	background: #29abe2;
+	text-decoration: none;
+}
 
 
 
@@ -258,7 +309,7 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 }
 
 #contact_form #button{
-	background: orange;
+	background: #F8931F;
 	color: white;
 	border: none;
 	padding: 8px;
@@ -268,7 +319,7 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 #contact_button{
 	width: 60px;
 	height: 60px;
-	background: orange;
+	background: #F8931F;
 	border-radius: 50%;
 	color: white;
 	z-index: 950; /*Menos de 999 porque sino se va a quedar por encima de la tarjeta de menu movil*/
@@ -299,8 +350,24 @@ barra de navegación y con las flechas de navegación - MIRRAR HTML SLIDER + SCR
 /*MÓVIL*/
 
 @media screen and (min-width:480px){
-	body{
-		background: red;
+
+	/*SECTION HOME*/
+	
+	#slider #Home .mainlogo{
+		width: 270px;
+		left: 50%;
+		margin-left: -135px; /*La mitad de si ancho*/
+		padding-bottom: 50px;
+	}
+	#slider #Home .mainlogo h2{
+		font-size: 1.4em;
+	}
+	#slider #Home .mainlogo figure{
+		width: 80%;
+		margin-left: 10%;
+	}
+	#slider #Home .buttonspage >*{
+		width: 200px;
 	}
 }
 
