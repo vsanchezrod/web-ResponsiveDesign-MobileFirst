@@ -344,7 +344,39 @@ footer{
 	z-index: 90; /*Que no supere a ninguno de los otros elementos q tiene importancia*/
 	height: 150px;
 	position: fixed;
+	bottom: -130px;
+	transition-duration: 0.4s;
+}
+
+footer:hover{
 	bottom: 0px;
+}
+
+footer:after{
+	font-family: 'icomoon';
+	content: "\ea50";
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left:-40px; /*Para que se quede centrado porque es la mitad de su ancho*/
+	margin-top: -30px; 
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: black;
+	color: white;
+	font-size: 4em;
+	transition-duration: 0.4s;
+}
+
+/*HOVER, como queremos que el hover se haga en cualquier parte del FOOTER hay que poner
+footer:hover:after. Si lo ponemos al reves footer:after:hover solo se va a ejecutar cuando
+pasemos el ratón por encima de after*/
+
+footer:hover:after{
+	transform: rotate(180deg);
+	background: white;
+	color: black;
 }
 
 footer .redessociales{
@@ -368,7 +400,6 @@ footer .redessociales a:before{
 	font-size: 2em;
 	top: 3px;
 	left: 5px;
-
 }
 
 footer .redessociales a:nth-child(1):before{
@@ -391,6 +422,13 @@ footer p{
 	font-size: 0.75em;
 	font-weight: lighter;
 }
+
+
+
+
+
+
+
 
 /*RESPONSIVE DESIGN*/
 
